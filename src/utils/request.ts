@@ -1,18 +1,8 @@
 import axios from 'axios';
 import { AxiosRequestConfig } from 'axios';
 import { Message } from 'element-ui';
-// axios.defaults.timeout = 5000;
-if (process.env !== 'production') {
-  axios.defaults.baseURL = '/api';
-}
-if (process.env.VUE_APP_FLAG === 'buildtest') {
-  axios.defaults.baseURL = 'http://shyc.dccnet.com.cn';
-}
-
-if (process.env.VUE_APP_FLAG === 'prod') {
-  axios.defaults.baseURL = 'http://per.sh.icbc.com.cn';
-}
-
+import { baseUrl } from '@/config/node_env';
+axios.defaults.baseURL = `${baseUrl}`;
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 axios.interceptors.request.use(
