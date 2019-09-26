@@ -1,29 +1,26 @@
-# typescript-test
+# marking
 
-## Project setup
-```
-yarn install
-```
+## 初始化项目
 
-### Compiles and hot-reloads for development
 ```
-yarn run serve
+yarn
 ```
 
-### Compiles and minifies for production
+### 本地开发环境运行的命令
+
+```
+yarn serve
+```
+
+### 生产环境测试版本运行的命令（准备上线前测试的环境）
+
+```
+yarn run buildtest
+```
+
+### 生产环境运行的命令（正式上线）
+
 ```
 yarn run build
 ```
 
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
